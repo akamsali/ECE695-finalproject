@@ -125,9 +125,9 @@ class VRNN(nn.Module):
 
     def sample(self, seq_len):
 
-        sample = torch.zeros(seq_len, self.x_dim, device=device)
+        sample = torch.zeros(seq_len, self.x_dim, device=self.device)
 
-        h = torch.zeros(self.n_layers, 1, self.h_dim, device=device)
+        h = torch.zeros(self.n_layers, 1, self.h_dim, device=self.device)
         for t in range(seq_len):
 
             #prior
@@ -165,7 +165,7 @@ class VRNN(nn.Module):
 
     def _reparameterized_sample(self, mean, std):
         """using std to sample"""
-        eps = torch.empty(size=std.size(), device=device, dtype=torch.float).normal_()
+        eps = torch.empty(size=std.size(), device=self.device, dtype=torch.float).normal_()
         return eps.mul(std).add_(mean)
 
 
