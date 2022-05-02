@@ -26,3 +26,11 @@ This does the following:
 2. Create log files with train and validation loss
 3. Evaluate the checkpoint and save the results in eval_log.csv
 4. Generate and save loss plots
+
+
+## References
+1. VRNN model is from [Chung et. al. 2016](https://arxiv.org/abs/1506.02216)
+2. I extended the pytorch implementation from [VariationalRecurrentNeuralNetwork](https://github.com/emited/VariationalRecurrentNeuralNetwork) to include:
+    1. Predicting future steps 
+    2. Predicting held out neurons
+3. I used NLBRunner runner class from [neurallatents](https://github.com/neurallatents/nlb_workshop) and added plotting and loggers for evaluation output.
