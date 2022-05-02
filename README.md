@@ -1,7 +1,7 @@
 # ECE695-finalproject
 # Variational-RNN for Joint Neural Latent Generation and Prediction
 The task is to predict future time steps, held out neuron spikes and decode behaviour of monkey from given spike data.
-To accomplish this I used V-RNN, where V helps model inherent noise in the measurements made and generalize better. This is important as neural signals are considered highly noisy. RNN captures the sequential information. 
+To accomplish this I used V-RNN, where V helps model inherent noise in the measurements made and generalize better. This is important as neural signals are considered highly noisy. RNN captures the sequential information. A linear layer is used to predict held out neurons. I achieved co-bps ~0.07 bits/spikes with 2500 epochs. 
 
 ![Model Architecture](model_architecture.png)
 
