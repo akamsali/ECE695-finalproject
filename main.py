@@ -23,7 +23,7 @@ from model import VRNN
 dataset_name = 'mc_maze_large'
 data_path = '/scratch/gilbreth/akamsali/Research/Makin/000138/sub-Jenkins'
 bin_size = 5
-epochs = 2
+epochs = 10000
 
 
 # Extract data
